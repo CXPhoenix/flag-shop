@@ -14,7 +14,6 @@ export class AlertModal extends HTMLElement {
             }
         });
 
-        // Expose globally for easy replacement of window.alert
         window.customAlert = (message, title = '系統訊息') => this.show(message, title);
     }
 

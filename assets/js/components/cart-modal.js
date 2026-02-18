@@ -14,27 +14,16 @@ export class CartModal extends HTMLElement {
             if (this.dialog.open) this.updateCartItems();
         });
 
-        // Store event for successful checkout to show flag
         store.addEventListener('checkout_success', () => {
             alert("購買成功！請檢查你的物品欄 (Console or Network for now, logic to be added)");
             this.close();
-            // In a real app check inventory. For this CTF, we might just alert the flag if they bought it.
+            
             this.checkInventoryForFlag();
         });
     }
 
     checkInventoryForFlag() {
-        // This is a bit of a hack, since cart is cleared on checkout in store.
-        // We need to capture the cart BEFORE clear, or have store return the items.
-        // Let's modify store.js later or just handle it here. 
-        // Actually, store.js clears cart. 
-        // Let's rely on the user checking the "network" or we add a "My Items" view.
-        // But for "Easy Challenge", maybe just alert the decrypted content of the last purchase?
         
-        // Better: Store should emit what was bought. 
-        // For now, let's just let the user "Buy" it. The challenge description saya "Student needs to buy to get flag".
-        // To make it visible, maybe we should have an "Inventory" section in the Store or Router.
-        // I will add an Inventory view later.
     }
 
     open() {
@@ -95,10 +84,9 @@ export class CartModal extends HTMLElement {
             checkoutBtn.innerHTML = "確認結帳";
         }
 
-        // Attach listeners
         this.querySelectorAll('.qty-input').forEach(input => {
             input.addEventListener('change', (e) => {
-                const qty = parseFloat(e.target.value); // Parse float to detect decimals
+                const qty = parseFloat(e.target.value); 
                 store.updateCartItemQty(e.target.dataset.id, qty);
             });
         });
@@ -138,7 +126,7 @@ export class CartModal extends HTMLElement {
         `;
 
         this.querySelector('#checkout-btn').addEventListener('click', () => {
-             // Store checkout returns { success: true/false, items: [] }
+             
             const result = store.checkout();
             
             if (result && result.success) {

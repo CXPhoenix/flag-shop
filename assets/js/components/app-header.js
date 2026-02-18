@@ -13,8 +13,8 @@ export class AppHeader extends HTMLElement {
     }
 
     updateCartCount() {
-        const count = store.state.cart.reduce((acc, item) => acc + (item.qty > 0 ? item.qty : 0), 0); // Only count positive items for badge? Or just length?
-        // Actually, just showing cart icon is enough, maybe a red dot.
+        const count = store.state.cart.reduce((acc, item) => acc + (item.qty > 0 ? item.qty : 0), 0); 
+        
         const badge = this.querySelector('#cart-badge');
         if (badge) {
             badge.textContent = store.state.cart.length;

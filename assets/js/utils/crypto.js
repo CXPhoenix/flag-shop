@@ -2,12 +2,8 @@
  * Obfuscated crypto utils
  */
 
-// Key is no longer used in simple shift, but we can keep a dummy or remove it.
-// The user reference just does char + 6.
 
 /**
- * Encrypts a string using Shift -6 algorithm (Reverse of decryption).
- * Formula: char - 6
  * @param {string} text 
  * @returns {string} Encrypted string
  */
@@ -22,9 +18,6 @@ export function _0x5a1b(text) {
 }
 
 /**
- * Decrypts a string using Shift +6 algorithm.
- * Formula: char + 6
- * Matches user reference: _0x4f78a7=_0x5342b2+0x6
  * @param {string} _0x4640bd Encrypted string
  * @returns {string} Original text
  */

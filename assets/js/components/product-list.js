@@ -5,7 +5,6 @@ export class ProductList extends HTMLElement {
         this.render();
         store.addEventListener('products_loaded', () => this.renderItems());
         
-        // Initial render if products already loaded
         if (store.state.products.length > 0) {
             this.renderItems();
         }
@@ -17,7 +16,7 @@ export class ProductList extends HTMLElement {
         
         store.state.products.forEach(product => {
             const card = document.createElement('product-card');
-            card.data = product; // Pass data via property setter
+            card.data = product; 
             grid.appendChild(card);
         });
     }

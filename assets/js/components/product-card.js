@@ -7,7 +7,6 @@ export class ProductCard extends HTMLElement {
     }
 
     render() {
-        // Use a "hacker" card style
         this.innerHTML = `
             <div class="bg-hacker-gray border border-hacker-dark-green p-4 rounded-lg hover:shadow-[0_0_15px_#00ff00] transition-all duration-300 group h-full flex flex-col">
                 <div class="text-6xl text-center mb-4 group-hover:scale-110 transition-transform cursor-default select-none">
@@ -27,7 +26,7 @@ export class ProductCard extends HTMLElement {
 
         this.querySelector('.add-to-cart-btn').addEventListener('click', () => {
             store.addToCart(this._product.id);
-            // Simple visual feedback
+            
             const btn = this.querySelector('.add-to-cart-btn');
             const originalText = btn.innerText;
             btn.innerText = "已加入";
