@@ -150,7 +150,7 @@ export class CartModal extends HTMLElement {
                     }
                     message += "\n\n";
                 });
-                alert(message);
+                window.customAlert(message, "🎉 交易完成");
                 this.close();
             }
         });

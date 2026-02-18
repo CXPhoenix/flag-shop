@@ -6,6 +6,7 @@ import './components/app-header.js';
 import './components/product-card.js';
 import './components/product-list.js';
 import './components/cart-modal.js';
+import './components/alert-modal.js';
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', () => {

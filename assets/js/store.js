@@ -44,7 +44,9 @@ class Store extends EventTarget {
         // Validation 1: No decimals Allowed (Strict check for UI, but vulnerability might bypass this if logic allows)
         // User requirement: "product quantity cannot be decimal"
         if (!Number.isInteger(qty)) {
-            alert("錯誤：數量不能為小數！");
+            // Check if customAlert exists (might be called before UI loads, though unlikely in this architecture)
+            if (window.customAlert) window.customAlert("錯誤：數量不能為小數！", "❌ 輸入錯誤");
+            else alert("錯誤：數量不能為小數！");
             return;
         }
 
@@ -73,13 +75,15 @@ class Store extends EventTarget {
         
         // Validation 2: Total cannot be negative (Vulnerability prerequisite)
         if (total < 0) {
-            alert("錯誤：購物車總金額不能小於 0！");
+            if (window.customAlert) window.customAlert("錯誤：購物車總金額不能小於 0！", "⛔️ 非法操作");
+            else alert("錯誤：購物車總金額不能小於 0！");
             return { success: false };
         }
 
         // Validation 3: Balance check
         if (total > this.state.balance) {
-            alert("餘額不足！");
+            if (window.customAlert) window.customAlert("餘額不足！", "💸 資金短缺");
+            else alert("餘額不足！");
             return { success: false };
         }
 
