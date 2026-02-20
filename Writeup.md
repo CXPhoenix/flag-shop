@@ -119,7 +119,7 @@ Flag 的價格遠高於你的初始餘額 ($100)，正常購買是不可能的�
 ### 步驟 4: 取得 Flag
 執行上述腳本後，系統會判定結帳成功，並解密 Flag 內容顯示給你。
 
-![Exploit Verification](/Users/phoenix/.gemini/antigravity/brain/20f59c02-1162-4ecf-ba6e-f111c16af6c5/verify_obfuscation_final_1771412185284.webp)
+![Exploit Verification](./img/flag.png)
 
 **Flag**: `FLAG{Y0u_B0ught_Th3_Fl4g_W1th_N3gqt1v3_M0n3y}`
 
