@@ -2,7 +2,17 @@
 
 本專案的所有重大變更都將記錄於此文件中。
 
-## [Unreleased]
+## [1.1.0] - 2026-02-20
+
+### 新增 (Added)
+- **結構化解題報告 (Structured Writeup)**: 引入 `ctf-writeup-writing` 規範，以偵探敘事風格重寫 `writeup.md`。
+- **漏洞知識卡 (Pattern Card)**: 於解題報告中新增漏洞模式分析，涵蓋前提條件、嗅覺線索與現實安全意義。
+
+### 變更 (Changed)
+- **文件規範化 (Documentation Standardization)**: 將解題報告檔案名稱統一為小寫 `writeup.md` 並更新 `README.md` 中的相關連結。
+- **解題邏輯修正 (Writeup Logic Fix)**: 修正解題報告中的計算範例，使 Flag 價格（$1,000）與攻擊腳本中的負數偏移量保持一致。
+
+## [1.0.0] - 2026-02-18
 
 ### 新增 (Added)
 - **安全部署工作流程 (Secure Deployment Workflow)**: 新增 `.github/workflows/deploy.yml` 以自動化部署至 GitHub Pages。
