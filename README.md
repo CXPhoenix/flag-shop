@@ -1,11 +1,21 @@
+<center>
+
 ![Flag Shop Banner](./img/banner.png)
 
-# 🚩 飄揚商店 (Flag Shop) - Capture The Flag Challenge
+# 🚩 旗幟商店 (Flag Shop)
 
-![License](https://img.shields.io/badge/license-ECL--2.0-blue.svg)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/cxphoenix/easy-flag-shop)
-![Category](https://img.shields.io/badge/category-Web%20Security-red.svg)
+**Easy Web CTF Challenge**
+
+![License](https://img.shields.io/badge/license-ECL--2.0-blue.svg)｜
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/cxphoenix/easy-flag-shop)｜
+![Category](https://img.shields.io/badge/category-Web%20Security-red.svg)｜
 ![Difficulty](https://img.shields.io/badge/difficulty-Easy-green.svg)
+
+</center>
+
+> [!NOTE]
+> 
+> 本題發想自 [`Buckeye Bazaar`](https://github.com/cscosu/buckeye-bazaar)、以及在 [`Threads 貼文`](https://www.threads.com/@hacker_200107/post/DUx3ZgZCC7H?xmt=AQF0xOR-wOn8OhdA8I0y407rXaaNBHJbq9rWKB2__HWN_EVvYdY3x3S5IkaKdLcEqAk-ROau&slof=1)
 
 這是一個專為資安初學者設計的 Web CTF 挑戰。在這個模擬的 hacker 商店中，你需要利用邏輯漏洞來購買你買不起的 Flag。
 
